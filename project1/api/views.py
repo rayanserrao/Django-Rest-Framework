@@ -18,7 +18,7 @@ def StudentDetail(request,pk):
     return JsonResponse(serializer.data)
 
 
-# query set
+# query set  
 def StudentALLDetail(request):
     # stu = Student.objects.get(id = 1)
     stu = Student.objects.all()
