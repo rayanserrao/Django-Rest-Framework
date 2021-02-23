@@ -17,7 +17,7 @@ def get_data(id = None):
 
     print(data)
 
-# get_data()
+get_data()
 
 
 def post_data():
@@ -27,16 +27,17 @@ def post_data():
         'roll':120,
         'city':'mangalore'
     }
+    headers = {'content-Type':'application/json'}
 
     json_data = json.dumps(data)
 
-    r = requests.post(url = URL, data=json_data)
+    r = requests.post(url = URL, headers = headers, data=json_data)
 
     data = r.json()
 
     print(data)
 
-post_data()
+# post_data()
 
 
 def update_data():
